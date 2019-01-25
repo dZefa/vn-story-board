@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "Visual Novel story board builder",
   "scripts": {
-    "test": "test"
+    "build": "webpack --config webpack.prod.js",
+    "build-dev": "webpack --config webpack.dev.js --watch"
   },
   "repository": {
     "type": "git",
