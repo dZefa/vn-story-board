@@ -27,16 +27,24 @@ module.exports = {
         test: /.tsx?$/,
         use: [
           {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: [
+                ['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css'}]
+              ]
+            }
+          },
+          {
             loader: 'ts-loader'
           }
         ]
       },
       {
-        test: /scss$/,
+        test: /.css$/,
         use: [
-          ExtractCSSPlugin.loader,
-          'css-loader',
-          'sass-loader'
+          'style-loader',
+          'css-loader'
         ]
       }
     ]
