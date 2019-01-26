@@ -27,6 +27,15 @@ module.exports = {
         test: /.tsx?$/,
         use: [
           {
+            loader: 'babel-loader',
+            options: {
+              presets: ['@babel/preset-env'],
+              plugins: [
+                ['import', { libraryName: 'antd', libraryDirectory: 'es', style: 'css'}]
+              ]
+            }
+          },
+          {
             loader: 'ts-loader'
           }
         ]
@@ -37,6 +46,13 @@ module.exports = {
           ExtractCSSPlugin.loader,
           'css-loader',
           'sass-loader'
+        ]
+      },
+      {
+        test: /.css$/,
+        use: [
+          'style-loader',
+          'css-loader'
         ]
       }
     ]
@@ -50,7 +66,6 @@ module.exports = {
     new HTMLPlugin({
       template: TEMPLATE_DIR,
       inject: true,
-    }),
-    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
+    })
   ]
 };
