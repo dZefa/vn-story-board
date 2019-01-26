@@ -50,6 +50,7 @@ module.exports = {
     new HTMLPlugin({
       template: TEMPLATE_DIR,
       inject: true,
-    })
+    }),
+    ["import", { "libraryName": "antd", "libraryDirectory": "es", "style": "css" }]
   ]
 };
