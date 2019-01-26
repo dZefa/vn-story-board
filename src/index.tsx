@@ -1,7 +1,9 @@
 import * as React from 'react';
 import { render } from 'react-dom';
 
+import { Main } from './components/main/main';
+
 render(
-  <h1> hi </h1>,
+  <Main />,
   document.getElementById('root')
 );
