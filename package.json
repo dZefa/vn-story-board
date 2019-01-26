@@ -19,6 +19,7 @@
   "dependencies": {
     "@types/react": "^16.7.20",
     "@types/react-dom": "^16.0.11",
+    "antd": "^3.12.4",
     "axios": "^0.18.0",
     "react": "^16.7.0",
     "react-dom": "^16.7.0"
