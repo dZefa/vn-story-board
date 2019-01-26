@@ -41,14 +41,6 @@ module.exports = {
         ]
       },
       {
-        test: /scss$/,
-        use: [
-          ExtractCSSPlugin.loader,
-          'css-loader',
-          'sass-loader'
-        ]
-      },
-      {
         test: /.css$/,
         use: [
           'style-loader',
