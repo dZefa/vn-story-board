@@ -6,7 +6,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { history, configureStore } from './store';
 
-import { Main } from './components/main/main';
+import Main from './components/main/main';
 
 import 'antd/dist/antd.css';
 import './index.css';
