@@ -2,6 +2,10 @@
 
 /node_modules/
 
+# Ops
+
+package-lock.json
+
 # Build
 
 /build/
